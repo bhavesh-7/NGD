@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="jquery.js"></script>
+        <title>Jquery Practical</title>
+        <script>
+            $(document).ready(function(){
+                $("#HParagraph").click(function(){
+                    $("p").hide(1000);
+                });
+                $("#HImage").click(function(){
+                    $("img").hide(1000);
+                });
+                $("#SParagraph").click(function(){
+                    $("p").show(1000);
+                });
+                $("#SImage").click(function(){
+                    $("img").show(1000);
+                });
+                $("#tPara").click(function(){
+                    $("p").toggle(1000);
+                });
+                $("#tImg").click(function(){
+                    $("img").toggle(1000);
+                });
+                $("#fadeIn").click(function(){
+                    $("#p1").fadeIn(1000);
+                    $("#p2").fadeIn("slow");
+                    $("img").fadeIn("fast");
+                });
+                $("#fadeOut").click(function(){
+                    $("#p1").fadeOut(1000);
+                    $("#p2").fadeOut("slow");
+                    $("img").fadeOut("fast");
+                });
+                $("#slideUp").click(function(){
+                    $("#panel").slideUp("slow");
+                });
+                $("#slideDown").click(function(){
+                    $("#panel").slideDown("slow");
+                });
+                $("#aniMage").click(function(){
+                    $("img").animate({
+                        left: '100px',
+                        height:'+=120',
+                        width:'+=200'
+                    });
+                });
+
+            });
+
+        </script>
+        <style> 
+            #panel, #flip {
+              padding: 5px;
+              text-align: center;
+              background-color: #e5eecc;
+              border: solid 1px #c3c3c3;
+            }
+            
+            #panel {
+              padding: 50px;
+              display: none;
+            }
+            </style>
+        
+    </head>
+    <body>
+        <h2>Exploring The Basics Of Jquery</h2>
+        <br>
+        <left>
+            <img src="jquery-1024x559.png" width="100" height="60">
+        </left>
+        <br>
+        <div id="panel">
+        <p id="p1">
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur '
+        </p>
+        
+        <p>'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur '
+</p>
+        
+        <p id="p2">
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum '
+        </p>
+        </div>
+        <button id="SParagraph">Show Paragraph</button>
+        <button id="HParagraph">Hide Paragraph</button>
+        <button id="SImage">Show Image</button>
+        <button id="HImage">Hide Image</button>
+        <button id="tPara">Toggle Paragraph</button>
+        <button id="tImg">Toogle Image</button>
+        <button id="fadeIn">fadeIn</button>
+        <button id="fadeOut">fadeOut</button>
+        <button id="slideUp">Slide Up</button>
+        <button id="slideDown">Slide Down</button>
+        <button id="aniMage">Animate Image</button>
+
+    </body>
+</html>
