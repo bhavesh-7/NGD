@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Convert Javascript into JSON</h2>
+        <script>
+            var myObj = {name:"John",age:31,city:"New york"};
+            var myJson = JSON.stringify(myObj);
+            windows.location = "demo_json.php?x="+myJson;
+        </script>
+    </body>
+</html>
